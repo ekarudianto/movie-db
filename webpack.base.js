@@ -1,6 +1,6 @@
 const HTMLWebpackPlugin = require('html-webpack-plugin');
 
-const WEB_TITLE = 'Eka Rudianto | My personal website';
+const WEB_TITLE = 'Movie DB - Search module';
 
 module.exports = {
   entry: `./index.js`,

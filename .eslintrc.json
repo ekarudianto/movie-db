@@ -2,13 +2,7 @@
   "plugins": [
       "react"
   ],
-  "parserOptions": {
-      "ecmaVersion": 9,
-      "sourceType": "module",
-      "ecmaFeatures": {
-          "jsx": true
-      }
-  },
+  "parser": "babel-eslint",
   "env": {
       "es6":     true,
       "browser": true,
@@ -21,6 +15,8 @@
       "plugin:react/recommended"
   ],
   "rules": {
+    "import/prefer-default-export": "off",
+    "react/forbid-prop-types": "off",
     "import/no-unresolved": [
         "error",
         {

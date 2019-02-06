@@ -6,27 +6,20 @@ const webpack = require('webpack');
 
 module.exports = merge(baseConfig, {
     module: {
-        rules: [
-            {
-              test: /\.(css|sass|scss)$/,
-              use: ExtractTextPlugin.extract({
-                fallback: 'style-loader',
-                use: [{
-                    loader: 'css-loader',
-                    options: {
-                      minimize: true,
-                      sourceMap: false
-                    }
-                }, {
-                    loader: 'sass-loader',
-                    options: {
-                      minimize: true,
-                      sourceMap: false
-                    }
-                }],
-              })
-            },
-        ],
+      rules: [
+        {
+          test: /\.(css)$/,
+          use: ExtractTextPlugin.extract({
+            fallback: 'style-loader',
+            use: [{
+                loader: 'css-loader',
+                options: {
+                  sourceMap: false
+                }
+            }],
+          })
+        },
+    ],
     },
     plugins: [
       new UglifyJsPlugin({

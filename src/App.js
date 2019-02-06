@@ -1,19 +1,23 @@
-import React, { Component } from 'react';
-import 'normalize.css';
-import Home from './components/Home';
-import './App.scss';
+import React, { PureComponent } from 'react';
+import styled from 'styled-components';
+import MovieSearch from './app/containers/MovieSearch';
+import ListContainer from './app/containers/ListContainer';
+import { GlobalStyle } from './GlobalStyle';
 
-class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      lang: 'en'
-    };
-  }
+const AppContainer = styled.div`
+  margin: auto;
+  max-width: 600px;
+  width: 100%;
+`;
 
+class App extends PureComponent {
   render() {
     return (
-      <Home />
+      <AppContainer>
+        <GlobalStyle />
+        <MovieSearch />
+        <ListContainer />
+      </AppContainer>
     );
   }
 }

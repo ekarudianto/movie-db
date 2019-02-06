@@ -9,22 +9,20 @@ module.exports = merge(baseConfig, {
   },
   module: {
     rules: [
-        {
-          test: /\.(css|sass|scss)$/,
-          use: [
-            'style-loader',
-            'css-loader',
-            'sass-loader'
-          ]
-        }, 
-    ],
+      {
+        test: /\.(css)$/,
+        use: [
+          'style-loader',
+          'css-loader',
+        ]
+      }, 
+  ],
   },
   plugins: [
     new BundleAnalyzerPlugin({
       analyzerMode: 'server',
       generateStatsFile: false,
     }),
-    new webpack.DefinePlugin({
-    }),
+    new webpack.DefinePlugin({}),
   ],
 });
